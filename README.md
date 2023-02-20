@@ -7,14 +7,7 @@ Tools for working with ZFS datasets
 To use this tool, you must have ZFS installed on your system. You can download and install ZFS by following the instructions.
 
 ```
-go install github.com/connorp2311/zfsTools@latest
-```
-
-If you cant run zfsTools then you need to make sure you go path is in your PATH
-https://go.dev/doc/gopath_code#GOPATH
-
-```
-export PATH=$PATH:$(go env GOPATH)/bin
+sudo GOBIN=/usr/local/bin/ go install github.com/connorp2311/zfsTools@latest
 ```
 
 ## Usage
