@@ -204,6 +204,11 @@ It provides several flags that allow users to specify the number of days to keep
 		//log if dry run
 		if dryRun {
 			logger.Log("Performing dry run - no snapshots will be deleted")
+		} else {
+			if os.Geteuid() != 0 {
+				logger.Log("This command must be run as root, enabling dry run to simulate the command")
+				dryRun = true
+			}
 		}
 
 		//get all snapshots
