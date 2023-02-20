@@ -208,6 +208,8 @@ It provides several flags that allow users to specify the number of days to keep
 			if os.Geteuid() != 0 {
 				logger.Log("This command must be run as root, enabling dry run to simulate the command")
 				dryRun = true
+			} else {
+				logger.Log("Running in destroy mode - snapshots will be deleted")
 			}
 		}
 
