@@ -61,4 +61,4 @@ For more information on usage, run `zfsTools --help` or view the [documentation]
 
 If you find any issues with the tool or would like to request a feature, please submit an issue on the [GitHub repository](https://github.com/connorp2311/zfsTools/issues).
 
-If you would like to contribute to the project, please fork the repository and submit a pull request. For more information on how to contribute,
+If you would like to contribute to the project, please fork the repository and submit a pull request.
