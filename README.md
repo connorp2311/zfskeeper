@@ -4,8 +4,19 @@ Tools for working with ZFS datasets
 
 ## Installation
 
+1. Clone the repository to your local machine using git clone:
 ```
-sudo GOBIN=/usr/local/bin/ go install github.com/connorp2311/zfsTools@latest
+git clone https://github.com/connorp2311/zfsTools.git
+```
+
+2. Install with go install
+```
+cd zfsTools
+sudo GOBIN=/usr/local/bin/ go install ./...
+```
+3. Confirm the install worked
+```
+zfsTools --version
 ```
 
 And optionally 
