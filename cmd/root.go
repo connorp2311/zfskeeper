@@ -34,7 +34,7 @@ var rootCmd = &cobra.Command{
 	Use:     "zfsTools",
 	Short:   "Tools for working with ZFS datasets",
 	Long:    `Tools for working with ZFS datasets`,
-	Version: "0.0.2",
+	Version: "0.1.0",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) {},

@@ -44,7 +44,6 @@ var (
 	dailyRetention      int
 	weeklyRetention     int
 	monthlyRetention    int
-	dataset             string
 	dryRun              bool
 )
 
