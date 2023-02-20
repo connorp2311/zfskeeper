@@ -22,7 +22,7 @@ THE SOFTWARE.
 package main
 
 import (
-	"github.com/connorp2311/zfsTools/cmd"
+	"github.com/connorp2311/zfskeeper/cmd"
 )
 
 func main() {

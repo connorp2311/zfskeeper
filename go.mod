@@ -1,4 +1,4 @@
-module github.com/connorp2311/zfsTools
+module github.com/connorp2311/zfskeeper
 
 go 1.17
 

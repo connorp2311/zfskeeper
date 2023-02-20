@@ -26,7 +26,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/connorp2311/zfsTools/utils"
+	"github.com/connorp2311/zfskeeper/utils"
 	"github.com/spf13/cobra"
 	"github.com/spf13/cobra/doc"
 )

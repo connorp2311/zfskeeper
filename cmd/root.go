@@ -31,7 +31,7 @@ var logFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:     "zfsTools",
+	Use:     "zfskeeper",
 	Short:   "Tools for working with ZFS datasets",
 	Long:    `Tools for working with ZFS datasets`,
 	Version: "0.1.0",
@@ -54,10 +54,10 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.zfsTools.yaml)")
+	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.zfskeeper.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
-	// rootCmd.Flags().BoolP("version", "v", false, "Version of zfsTools")
+	// rootCmd.Flags().BoolP("version", "v", false, "Version of zfskeeper")
 	rootCmd.PersistentFlags().StringVarP(&logFile, "log-file", "l", "", "Log file to write to")
 }
