@@ -4,10 +4,13 @@ Tools for working with ZFS datasets
 
 ## Installation
 
-To use this tool, you must have ZFS installed on your system. You can download and install ZFS by following the instructions.
-
 ```
 sudo GOBIN=/usr/local/bin/ go install github.com/connorp2311/zfsTools@latest
+```
+
+And optionally 
+```
+sudo zfsTools completion bash | sudo tee /etc/bash_completion.d/zfsTools
 ```
 
 ## Usage
