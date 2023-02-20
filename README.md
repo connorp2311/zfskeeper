@@ -6,15 +6,15 @@ Tools for working with ZFS datasets
 
 To use this tool, you must have ZFS installed on your system. You can download and install ZFS by following the instructions.
 
-1. Clone the repository to your local machine:
 ```
-git clone https://github.com/connorp2311/zfsTools.git
+go install github.com/connorp2311/zfsTools@latest
 ```
 
-2. Navigate to the cloned repository and install the tool:
+If you cant run zfsTools then you need to make sure you go path is in your PATH
+https://go.dev/doc/gopath_code#GOPATH
+
 ```
-cd your-repo
-go install
+export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
 ## Usage

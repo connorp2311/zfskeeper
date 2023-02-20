@@ -161,14 +161,14 @@ func findRetention(snapshots []Snapshot, retentionPeriodCount int, retentionPeri
 //delete snapshots with zfs destroy, if dryRun is true use the -n flag to simulate the command
 func pruneSnapshot(snapshot Snapshot, dryRun bool) (string, error) {
 	if dryRun {
-		out, err := exec.Command("zfs", "destroy", "-n", snapshot.name).Output()
+		out, err := exec.Command("zfs", "destroy", "-v", "-n", snapshot.name).Output()
 		if err != nil {
 			return string(out), err
 		} else {
 			return string(out), nil
 		}
 	} else {
-		out, err := exec.Command("zfs", "destroy", snapshot.name).Output()
+		out, err := exec.Command("zfs", "destroy", "-v", snapshot.name).Output()
 		if err != nil {
 			return string(out), err
 		} else {
@@ -243,8 +243,10 @@ It provides several flags that allow users to specify the number of days to keep
 			os.Exit(0)
 		}
 
+		logger.Log(fmt.Sprintf("Pruning %d snapshots for dataset %s", len(pruneSnapshots), dataset))
+
 		for _, snapshot := range pruneSnapshots {
-			time.Sleep(2 * time.Second)
+			time.Sleep(1 * time.Second)
 			out, err := pruneSnapshot(snapshot, dryRun)
 			if err != nil {
 				logger.Log(fmt.Sprintf("Error deleting snapshot %s: %s", snapshot.name, err))
